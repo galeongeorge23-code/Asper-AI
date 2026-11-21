@@ -81,8 +81,9 @@ CSS = """
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-html, body, .stApp, [class*="st-"], button, input, textarea, select {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif !important;
+.stApp, .stMarkdown, .stChatMessage, .stTextInput, .stTextArea,
+.stSelectbox, .stButton, .stExpander, [data-testid="stSidebar"] {
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .stApp { background: #14110E; color: #F4EDE2; }
@@ -90,12 +91,16 @@ html, body, .stApp, [class*="st-"], button, input, textarea, select {
 #MainMenu, footer { visibility: hidden; }
 
 .asper-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 0.2rem;
     letter-spacing: -0.02em;
     background: linear-gradient(90deg, #FF9F1C, #FFD166);
     -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-.asper-tagline { color: #BDB2A3; font-size: 1.05rem; margin-bottom: 1.2rem; line-height: 1.5; }
+.asper-tagline {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #BDB2A3; font-size: 1.05rem; margin-bottom: 1.2rem; line-height: 1.5;
+}
 
 .stButton > button {
     background: #FF9F1C; color: #14110E; border: none; border-radius: 10px;
