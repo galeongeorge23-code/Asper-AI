@@ -99,7 +99,16 @@ import os
 import streamlit as st
 from google import genai
 
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+try:
+    api_key = st.secrets["GEMINI_API_KEY"]  # Streamlit Cloud
+except Exception:
+    api_key = os.environ.get("GEMINI_API_KEY")  # your local computer
+
+if not api_key:
+    st.error("Missing GEMINI_API_KEY. Add it in the app's Secrets settings.")
+    st.stop()
+
+client = genai.Client(api_key=api_key)
 
 if "profile" not in st.session_state:
     st.session_state.profile = {}
