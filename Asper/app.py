@@ -79,16 +79,23 @@ EXAMPLES = [
 # ---------- Styling: dark, with orange and yellow accents ----------
 CSS = """
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+html, body, .stApp, [class*="st-"], button, input, textarea, select {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif !important;
+}
+
 .stApp { background: #14110E; color: #F4EDE2; }
 [data-testid="stSidebar"] { background: #1C1813; border-right: 1px solid #2E2820; }
 #MainMenu, footer { visibility: hidden; }
 
 .asper-title {
     font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 0.2rem;
+    letter-spacing: -0.02em;
     background: linear-gradient(90deg, #FF9F1C, #FFD166);
     -webkit-background-clip: text; background-clip: text; color: transparent;
 }
-.asper-tagline { color: #BDB2A3; font-size: 1.05rem; margin-bottom: 1.2rem; }
+.asper-tagline { color: #BDB2A3; font-size: 1.05rem; margin-bottom: 1.2rem; line-height: 1.5; }
 
 .stButton > button {
     background: #FF9F1C; color: #14110E; border: none; border-radius: 10px;
@@ -102,7 +109,7 @@ CSS = """
 }
 [data-testid="stChatMessage"] {
     background: #1F1B16; border: 1px solid #2E2820; border-radius: 14px;
-    padding: 0.9rem 1rem;
+    padding: 0.9rem 1rem; line-height: 1.6;
 }
 textarea, input, [data-baseweb="select"] > div {
     background: #221D17 !important; color: #F4EDE2 !important;
