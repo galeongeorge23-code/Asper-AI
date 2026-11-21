@@ -71,8 +71,8 @@ Base the steps on the user's profile where it's relevant. Keep it under 350 word
 """
 
 EXAMPLES = [
-    "I studied psychology but I don't know what to do with it",
-    "I want to be a data analyst. What am I missing?",
+    "I studied a class but I don't know what to do with it",
+    "I want a certain job. Could you tell me where I am missing?",
     "I feel stuck and unsure about my job search",
 ]
 
